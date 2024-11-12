@@ -111,6 +111,41 @@ paraphrase_multilingual_mpnet_base_v2 = ModelMeta(
     use_instructions=False,
 )
 
+
+paraphrase_all_mpnet_base_v2 = ModelMeta(
+    name="sentence-transformers/all-mpnet-base-v2",
+    languages=paraphrase_langs,
+    open_weights=True,
+    revision="9a3225965996d404b775526de6dbfe85d3368642",  # can be any
+    release_date="2019-11-01",  # release date of paper
+    # n_parameters=278_000_000,
+    memory_usage=None,
+    embed_dim=768,
+    license="apache-2.0",
+    max_tokens=512,
+    reference="https://huggingface.co/sentence-transformers/all-mpnet-base-v2",
+    similarity_fn_name="cosine",
+    framework=["Sentence Transformers", "PyTorch"],
+    use_instructions=False,
+)
+
+paraphrase_t5_base = ModelMeta(
+    name="sentence-transformers/sentence-t5-base",
+    languages=paraphrase_langs,
+    open_weights=True,
+    revision="50c53e206f8b01c9621484a3c0aafce4e55efebf",  # can be any
+    release_date="2019-11-01",  # release date of paper
+    # n_parameters=278_000_000,
+    memory_usage=None,
+    embed_dim=768,
+    license="apache-2.0",
+    max_tokens=512,
+    reference="https://huggingface.co/sentence-transformers/all-mpnet-base-v2",
+    similarity_fn_name="cosine",
+    framework=["Sentence Transformers", "PyTorch"],
+    use_instructions=False,
+)
+
 labse = ModelMeta(
     name="sentence-transformers/LaBSE",
     languages=paraphrase_langs,

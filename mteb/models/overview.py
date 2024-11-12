@@ -11,7 +11,9 @@ from mteb.model_meta import ModelMeta
 from mteb.models import (
     bge_models,
     bm25,
+    clip_models,
     cohere_models,
+    dinov2_vlm,
     e5_instruct,
     e5_models,
     google_models,
@@ -39,7 +41,9 @@ logger = logging.getLogger(__name__)
 model_modules = [
     bge_models,
     bm25,
+    clip_models,
     cohere_models,
+    dinov2_vlm,
     e5_instruct,
     e5_models,
     google_models,
