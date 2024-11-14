@@ -13,6 +13,7 @@ from mteb.models import (
     bm25,
     clip_models,
     cohere_models,
+    dfn,
     dinov2_vlm,
     e5_instruct,
     e5_models,
@@ -21,6 +22,7 @@ from mteb.models import (
     gte_models,
     jina_models,
     llm2vec_models,
+    metaclip,
     mxbai_models,
     nomic_models,
     openai_models,
@@ -31,6 +33,7 @@ from mteb.models import (
     ru_sentence_models,
     salesforce_models,
     sentence_transformers_models,
+    siglip,
     stella_models,
     uae_models,
     voyage_models,
@@ -43,6 +46,7 @@ model_modules = [
     bm25,
     clip_models,
     cohere_models,
+    dfn,
     dinov2_vlm,
     e5_instruct,
     e5_models,
@@ -50,12 +54,14 @@ model_modules = [
     gritlm_models,
     gte_models,
     llm2vec_models,
+    metaclip,
     mxbai_models,
     nomic_models,
     openai_models,
     ru_sentence_models,
     salesforce_models,
     sentence_transformers_models,
+    siglip,
     voyage_models,
     google_models,
     repllama_models,
@@ -126,6 +132,8 @@ def get_model(model_name: str, revision: str | None = None, **kwargs: Any) -> En
     Returns:
         A model object
     """
+    print(model_name)
+    print(revision)
     meta = get_model_meta(model_name, revision)
     model = meta.load_model(**kwargs)
 
@@ -148,6 +156,7 @@ def get_model_meta(model_name: str, revision: str | None = None) -> ModelMeta:
     Returns:
         A model metadata object
     """
+    print(MODEL_REGISTRY.keys())
     if model_name in MODEL_REGISTRY:
         if revision and (not MODEL_REGISTRY[model_name].revision == revision):
             raise ValueError(
