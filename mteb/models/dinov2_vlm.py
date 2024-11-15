@@ -151,6 +151,44 @@ text_embedding_vb0_tdim768 = ModelMeta(
 
 
 
+text_embedding_vb0_tdim768_32Kbatchsize_cls = ModelMeta(
+    name="dinov2_vlm/vitlreg_768d12h12l_224_cls_50000_2000_32768_lr_0.0005_wd_0.0001_1024_dp_0.0_vb_0_vlp_False_beta1_0.9_beta2_0.99_eps_1e-08_fls_False",
+    revision="",
+    embed_dim=2048, 
+    release_date="2024-11-03",
+    languages=None,  # supported languages not specified
+    loader=partial(DINOv2_VLM_Wrapper, model_name="large"),
+    max_tokens=8191,
+    open_weights=False,
+    n_parameters=None,
+    memory_usage=None,
+    license=None,
+    reference=None,
+    similarity_fn_name="cosine",
+    framework=["API"],
+    use_instructions=False,
+)
+
+
+text_embedding_vb0_tdim768_32Kbatchsize = ModelMeta(
+    name="dinov2_vlm/vitlreg_768d12h12l_224_cls_patch0mean_50000_2000_32768_lr_0.0005_wd_0.0001_2048_dp_0.0_vb_0_vlp_False_beta1_0.9_beta2_0.99_eps_1e-08_fls_False",
+    revision="",
+    embed_dim=2048, 
+    release_date="2024-11-03",
+    languages=None,  # supported languages not specified
+    loader=partial(DINOv2_VLM_Wrapper, model_name="large"),
+    max_tokens=8191,
+    open_weights=False,
+    n_parameters=None,
+    memory_usage=None,
+    license=None,
+    reference=None,
+    similarity_fn_name="cosine",
+    framework=["API"],
+    use_instructions=False,
+)
+
+
 text_embedding_vb2_tdim768 = ModelMeta(
     name="dinov2_vlm/1101_metaclipv2mbraw_2vb_dim2048_tdim768_tlayer12_thead12_res224_50k_lr7e-4",
     revision="",
