@@ -22,6 +22,4 @@ tasks = mteb.get_tasks(tasks = [args.task], languages = ["eng"])
 # tasks = mteb.get_benchmark("MTEB(eng, classic)")
 
 evaluation = mteb.MTEB(tasks=tasks)
-print(task)
-print(evaluation)
 results = evaluation.run(model, verbosity=3)
